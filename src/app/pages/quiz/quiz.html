@@ -1,35 +1,17 @@
+<div class="layout" *ngIf="quiz">
+  <aside class="left-side">
   <div class="floating-timer" id="timer">
     <app-timer [duration]="(quiz?.questions?.length ?? 0) * 60" (timeUp)="handleTimeUp()"></app-timer>
   </div>
 
-<div class="layout" *ngIf="quiz">
+  </aside>
   <main>
-    <div class="exam-header">
-      <div class="info">
-        <span class="badge">Giữa kỳ</span>
-        <span class="badge">Học phần: Web 1</span>
-        <div>Mã đề: 01 · Hình thức: Trắc nghiệm &amp; Tự luận</div>
-      </div>
-      <div class="info">
-        <div>Mốc thời gian:</div>
-        <div>Bắt đầu: {{ startTime | date:'HH:mm' }} · Kết thúc dự kiến: {{ endTime | date:'HH:mm' }}</div>
-      </div>
-    </div>
-
     <form id="exam-form">
-      <section class="question"
-               *ngFor="let question of quiz.questions; let i = index"
-               [id]="'q' + i"
-               [attr.data-question-index]="i"
-               data-type="mcq">
-        <app-question [question]="question" [questionIndex]="i" (optionSelected)="onOptionSelected($event)"></app-question>
+      <section class="question" *ngFor="let question of quiz.questions; let i = index" [id]="'q' + i"
+        [attr.data-question-index]="i" data-type="mcq">
+        <app-question [question]="question" [questionIndex]="i"
+          (optionSelected)="onOptionSelected($event)"></app-question>
       </section>
-
-      <div class="submit-bar">
-        <button type="button" class="btn-primary" id="btn-submit-main" (click)="submitQuiz()">
-          Nộp bài
-        </button>
-      </div>
     </form>
   </main>
 
@@ -37,9 +19,7 @@
     <section>
       <div class="sidebar-section-title">Thông tin bài thi</div>
       <div class="exam-meta">
-        <div><span class="label">Thời lượng:</span> {{ quiz.questions?.length }} phút</div>
-        <div><span class="label">Số câu:</span> {{ quiz.questions?.length }} (trắc nghiệm + tự luận)</div>
-        <div><span class="label">Trạng thái:</span> Đang làm bài</div>
+        <div><span class="label">Thời lượng:</span> {{ quiz.questions.length }} phút</div>
       </div>
     </section>
 
@@ -48,27 +28,21 @@
       <div class="progress">
         <div class="progress-bar" [style.width.%]="progress"></div>
       </div>
-      <div class="progress-text">{{ answeredQuestions }} / {{ quiz.questions?.length }} câu đã trả lời</div>
+      <div class="progress-text">{{ answeredQuestions }} / {{ quiz.questions.length }} câu đã trả lời</div>
     </section>
 
-    <section>
+    <section class="list-button">
       <div class="sidebar-section-title">Danh sách câu hỏi</div>
       <div class="question-nav" id="question-nav">
-        <button *ngFor="let question of quiz.questions; let i = index"
-                type="button"
-                [attr.data-target]="'q' + i"
-                [class.active]="i === currentQuestionIndex"
-                [class.answered]="isAnswered(i)"
-                (click)="scrollToQuestion('q' + i)">
+        <button *ngFor="let question of quiz.questions; let i = index" type="button" [attr.data-target]="'q' + i"
+          [class.active]="i === currentQuestionIndex" [class.answered]="isAnswered(i)"
+          (click)="scrollToQuestion('q' + i)">
           {{ i + 1 }}
         </button>
       </div>
     </section>
 
     <div class="actions">
-      <button class="btn-outline" type="button" id="btn-save">
-        💾 Lưu tạm thời
-      </button>
       <button class="btn-primary" type="button" id="btn-submit-side" (click)="submitQuiz()">
         ✅ Nộp bài
       </button>

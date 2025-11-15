@@ -6,7 +6,7 @@ import { QuizListComponent } from './pages/quiz-list/quiz-list';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, QuizComponent, QuizListComponent],
+  imports: [RouterOutlet],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })

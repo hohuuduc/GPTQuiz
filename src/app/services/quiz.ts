@@ -66,6 +66,566 @@ export class QuizService {
           questionText: 'Which file is the main entry point for an Angular application?',
           options: ['index.html', 'app.component.ts', 'main.ts', 'angular.json'],
           correctAnswer: 'main.ts'
+        },
+        {
+          questionText: 'Which file is the main entry point for an Angular application?',
+          options: ['index.html', 'app.component.ts', 'main.ts', 'angular.json'],
+          correctAnswer: 'main.ts'
+        },
+        {
+          questionText: 'Which file is the main entry point for an Angular application?',
+          options: ['index.html', 'app.component.ts', 'main.ts', 'angular.json'],
+          correctAnswer: 'main.ts'
+        },
+        {
+          questionText: 'Which file is the main entry point for an Angular application?',
+          options: ['index.html', 'app.component.ts', 'main.ts', 'angular.json'],
+          correctAnswer: 'main.ts'
+        },
+        {
+          questionText: 'Which file is the main entry point for an Angular application?',
+          options: ['index.html', 'app.component.ts', 'main.ts', 'angular.json'],
+          correctAnswer: 'main.ts'
+        },
+        {
+          questionText: 'Which file is the main entry point for an Angular application?',
+          options: ['index.html', 'app.component.ts', 'main.ts', 'angular.json'],
+          correctAnswer: 'main.ts'
+        },
+        {
+          questionText: 'Which file is the main entry point for an Angular application?',
+          options: ['index.html', 'app.component.ts', 'main.ts', 'angular.json'],
+          correctAnswer: 'main.ts'
+        },
+        {
+          questionText: 'Which file is the main entry point for an Angular application?',
+          options: ['index.html', 'app.component.ts', 'main.ts', 'angular.json'],
+          correctAnswer: 'main.ts'
+        },
+        {
+          questionText: 'Which file is the main entry point for an Angular application?',
+          options: ['index.html', 'app.component.ts', 'main.ts', 'angular.json'],
+          correctAnswer: 'main.ts'
+        },
+        {
+          questionText: 'Which file is the main entry point for an Angular application?',
+          options: ['index.html', 'app.component.ts', 'main.ts', 'angular.json'],
+          correctAnswer: 'main.ts'
+        },
+        {
+          questionText: 'Which file is the main entry point for an Angular application?',
+          options: ['index.html', 'app.component.ts', 'main.ts', 'angular.json'],
+          correctAnswer: 'main.ts'
+        },
+        {
+          questionText: 'Which file is the main entry point for an Angular application?',
+          options: ['index.html', 'app.component.ts', 'main.ts', 'angular.json'],
+          correctAnswer: 'main.ts'
+        },
+        {
+          questionText: 'Which file is the main entry point for an Angular application?',
+          options: ['index.html', 'app.component.ts', 'main.ts', 'angular.json'],
+          correctAnswer: 'main.ts'
+        },
+        {
+          questionText: 'Which file is the main entry point for an Angular application?',
+          options: ['index.html', 'app.component.ts', 'main.ts', 'angular.json'],
+          correctAnswer: 'main.ts'
+        },
+        {
+          questionText: 'Which file is the main entry point for an Angular application?',
+          options: ['index.html', 'app.component.ts', 'main.ts', 'angular.json'],
+          correctAnswer: 'main.ts'
+        },
+        {
+          questionText: 'Which file is the main entry point for an Angular application?',
+          options: ['index.html', 'app.component.ts', 'main.ts', 'angular.json'],
+          correctAnswer: 'main.ts'
+        },
+        {
+          questionText: 'Which file is the main entry point for an Angular application?',
+          options: ['index.html', 'app.component.ts', 'main.ts', 'angular.json'],
+          correctAnswer: 'main.ts'
+        },
+        {
+          questionText: 'Which file is the main entry point for an Angular application?',
+          options: ['index.html', 'app.component.ts', 'main.ts', 'angular.json'],
+          correctAnswer: 'main.ts'
+        },
+        {
+          questionText: 'Which file is the main entry point for an Angular application?',
+          options: ['index.html', 'app.component.ts', 'main.ts', 'angular.json'],
+          correctAnswer: 'main.ts'
+        },
+        {
+          questionText: 'Which file is the main entry point for an Angular application?',
+          options: ['index.html', 'app.component.ts', 'main.ts', 'angular.json'],
+          correctAnswer: 'main.ts'
+        },
+        {
+          questionText: 'Which file is the main entry point for an Angular application?',
+          options: ['index.html', 'app.component.ts', 'main.ts', 'angular.json'],
+          correctAnswer: 'main.ts'
+        },
+        {
+          questionText: 'Which file is the main entry point for an Angular application?',
+          options: ['index.html', 'app.component.ts', 'main.ts', 'angular.json'],
+          correctAnswer: 'main.ts'
+        },
+        {
+          questionText: 'Which file is the main entry point for an Angular application?',
+          options: ['index.html', 'app.component.ts', 'main.ts', 'angular.json'],
+          correctAnswer: 'main.ts'
+        },
+        {
+          questionText: 'Which file is the main entry point for an Angular application?',
+          options: ['index.html', 'app.component.ts', 'main.ts', 'angular.json'],
+          correctAnswer: 'main.ts'
+        },
+        {
+          questionText: 'Which file is the main entry point for an Angular application?',
+          options: ['index.html', 'app.component.ts', 'main.ts', 'angular.json'],
+          correctAnswer: 'main.ts'
+        },
+        {
+          questionText: 'Which file is the main entry point for an Angular application?',
+          options: ['index.html', 'app.component.ts', 'main.ts', 'angular.json'],
+          correctAnswer: 'main.ts'
+        },
+        {
+          questionText: 'Which file is the main entry point for an Angular application?',
+          options: ['index.html', 'app.component.ts', 'main.ts', 'angular.json'],
+          correctAnswer: 'main.ts'
+        },
+        {
+          questionText: 'Which file is the main entry point for an Angular application?',
+          options: ['index.html', 'app.component.ts', 'main.ts', 'angular.json'],
+          correctAnswer: 'main.ts'
+        },
+        {
+          questionText: 'Which file is the main entry point for an Angular application?',
+          options: ['index.html', 'app.component.ts', 'main.ts', 'angular.json'],
+          correctAnswer: 'main.ts'
+        },
+        {
+          questionText: 'Which file is the main entry point for an Angular application?',
+          options: ['index.html', 'app.component.ts', 'main.ts', 'angular.json'],
+          correctAnswer: 'main.ts'
+        },
+        {
+          questionText: 'Which file is the main entry point for an Angular application?',
+          options: ['index.html', 'app.component.ts', 'main.ts', 'angular.json'],
+          correctAnswer: 'main.ts'
+        },
+        {
+          questionText: 'Which file is the main entry point for an Angular application?',
+          options: ['index.html', 'app.component.ts', 'main.ts', 'angular.json'],
+          correctAnswer: 'main.ts'
+        },
+        {
+          questionText: 'Which file is the main entry point for an Angular application?',
+          options: ['index.html', 'app.component.ts', 'main.ts', 'angular.json'],
+          correctAnswer: 'main.ts'
+        },
+        {
+          questionText: 'Which file is the main entry point for an Angular application?',
+          options: ['index.html', 'app.component.ts', 'main.ts', 'angular.json'],
+          correctAnswer: 'main.ts'
+        },
+        {
+          questionText: 'Which file is the main entry point for an Angular application?',
+          options: ['index.html', 'app.component.ts', 'main.ts', 'angular.json'],
+          correctAnswer: 'main.ts'
+        },
+        {
+          questionText: 'Which file is the main entry point for an Angular application?',
+          options: ['index.html', 'app.component.ts', 'main.ts', 'angular.json'],
+          correctAnswer: 'main.ts'
+        },
+        {
+          questionText: 'Which file is the main entry point for an Angular application?',
+          options: ['index.html', 'app.component.ts', 'main.ts', 'angular.json'],
+          correctAnswer: 'main.ts'
+        },
+        {
+          questionText: 'Which file is the main entry point for an Angular application?',
+          options: ['index.html', 'app.component.ts', 'main.ts', 'angular.json'],
+          correctAnswer: 'main.ts'
+        },
+        {
+          questionText: 'Which file is the main entry point for an Angular application?',
+          options: ['index.html', 'app.component.ts', 'main.ts', 'angular.json'],
+          correctAnswer: 'main.ts'
+        },
+        {
+          questionText: 'Which file is the main entry point for an Angular application?',
+          options: ['index.html', 'app.component.ts', 'main.ts', 'angular.json'],
+          correctAnswer: 'main.ts'
+        },
+        {
+          questionText: 'Which file is the main entry point for an Angular application?',
+          options: ['index.html', 'app.component.ts', 'main.ts', 'angular.json'],
+          correctAnswer: 'main.ts'
+        },
+        {
+          questionText: 'Which file is the main entry point for an Angular application?',
+          options: ['index.html', 'app.component.ts', 'main.ts', 'angular.json'],
+          correctAnswer: 'main.ts'
+        },
+        {
+          questionText: 'Which file is the main entry point for an Angular application?',
+          options: ['index.html', 'app.component.ts', 'main.ts', 'angular.json'],
+          correctAnswer: 'main.ts'
+        },
+        {
+          questionText: 'Which file is the main entry point for an Angular application?',
+          options: ['index.html', 'app.component.ts', 'main.ts', 'angular.json'],
+          correctAnswer: 'main.ts'
+        },
+        {
+          questionText: 'Which file is the main entry point for an Angular application?',
+          options: ['index.html', 'app.component.ts', 'main.ts', 'angular.json'],
+          correctAnswer: 'main.ts'
+        },
+        {
+          questionText: 'Which file is the main entry point for an Angular application?',
+          options: ['index.html', 'app.component.ts', 'main.ts', 'angular.json'],
+          correctAnswer: 'main.ts'
+        },
+        {
+          questionText: 'Which file is the main entry point for an Angular application?',
+          options: ['index.html', 'app.component.ts', 'main.ts', 'angular.json'],
+          correctAnswer: 'main.ts'
+        },
+        {
+          questionText: 'Which file is the main entry point for an Angular application?',
+          options: ['index.html', 'app.component.ts', 'main.ts', 'angular.json'],
+          correctAnswer: 'main.ts'
+        },
+        {
+          questionText: 'Which file is the main entry point for an Angular application?',
+          options: ['index.html', 'app.component.ts', 'main.ts', 'angular.json'],
+          correctAnswer: 'main.ts'
+        },
+        {
+          questionText: 'Which file is the main entry point for an Angular application?',
+          options: ['index.html', 'app.component.ts', 'main.ts', 'angular.json'],
+          correctAnswer: 'main.ts'
+        },
+        {
+          questionText: 'Which file is the main entry point for an Angular application?',
+          options: ['index.html', 'app.component.ts', 'main.ts', 'angular.json'],
+          correctAnswer: 'main.ts'
+        },
+        {
+          questionText: 'Which file is the main entry point for an Angular application?',
+          options: ['index.html', 'app.component.ts', 'main.ts', 'angular.json'],
+          correctAnswer: 'main.ts'
+        },
+        {
+          questionText: 'Which file is the main entry point for an Angular application?',
+          options: ['index.html', 'app.component.ts', 'main.ts', 'angular.json'],
+          correctAnswer: 'main.ts'
+        },
+        {
+          questionText: 'Which file is the main entry point for an Angular application?',
+          options: ['index.html', 'app.component.ts', 'main.ts', 'angular.json'],
+          correctAnswer: 'main.ts'
+        },
+        {
+          questionText: 'Which file is the main entry point for an Angular application?',
+          options: ['index.html', 'app.component.ts', 'main.ts', 'angular.json'],
+          correctAnswer: 'main.ts'
+        },
+        {
+          questionText: 'Which file is the main entry point for an Angular application?',
+          options: ['index.html', 'app.component.ts', 'main.ts', 'angular.json'],
+          correctAnswer: 'main.ts'
+        },
+        {
+          questionText: 'Which file is the main entry point for an Angular application?',
+          options: ['index.html', 'app.component.ts', 'main.ts', 'angular.json'],
+          correctAnswer: 'main.ts'
+        },
+        {
+          questionText: 'Which file is the main entry point for an Angular application?',
+          options: ['index.html', 'app.component.ts', 'main.ts', 'angular.json'],
+          correctAnswer: 'main.ts'
+        },
+        {
+          questionText: 'Which file is the main entry point for an Angular application?',
+          options: ['index.html', 'app.component.ts', 'main.ts', 'angular.json'],
+          correctAnswer: 'main.ts'
+        },
+        {
+          questionText: 'Which file is the main entry point for an Angular application?',
+          options: ['index.html', 'app.component.ts', 'main.ts', 'angular.json'],
+          correctAnswer: 'main.ts'
+        },
+        {
+          questionText: 'Which file is the main entry point for an Angular application?',
+          options: ['index.html', 'app.component.ts', 'main.ts', 'angular.json'],
+          correctAnswer: 'main.ts'
+        },
+        {
+          questionText: 'Which file is the main entry point for an Angular application?',
+          options: ['index.html', 'app.component.ts', 'main.ts', 'angular.json'],
+          correctAnswer: 'main.ts'
+        },
+        {
+          questionText: 'Which file is the main entry point for an Angular application?',
+          options: ['index.html', 'app.component.ts', 'main.ts', 'angular.json'],
+          correctAnswer: 'main.ts'
+        },
+        {
+          questionText: 'Which file is the main entry point for an Angular application?',
+          options: ['index.html', 'app.component.ts', 'main.ts', 'angular.json'],
+          correctAnswer: 'main.ts'
+        },
+        {
+          questionText: 'Which file is the main entry point for an Angular application?',
+          options: ['index.html', 'app.component.ts', 'main.ts', 'angular.json'],
+          correctAnswer: 'main.ts'
+        },
+        {
+          questionText: 'Which file is the main entry point for an Angular application?',
+          options: ['index.html', 'app.component.ts', 'main.ts', 'angular.json'],
+          correctAnswer: 'main.ts'
+        },
+        {
+          questionText: 'Which file is the main entry point for an Angular application?',
+          options: ['index.html', 'app.component.ts', 'main.ts', 'angular.json'],
+          correctAnswer: 'main.ts'
+        },
+        {
+          questionText: 'Which file is the main entry point for an Angular application?',
+          options: ['index.html', 'app.component.ts', 'main.ts', 'angular.json'],
+          correctAnswer: 'main.ts'
+        },
+        {
+          questionText: 'Which file is the main entry point for an Angular application?',
+          options: ['index.html', 'app.component.ts', 'main.ts', 'angular.json'],
+          correctAnswer: 'main.ts'
+        },
+        {
+          questionText: 'Which file is the main entry point for an Angular application?',
+          options: ['index.html', 'app.component.ts', 'main.ts', 'angular.json'],
+          correctAnswer: 'main.ts'
+        },
+        {
+          questionText: 'Which file is the main entry point for an Angular application?',
+          options: ['index.html', 'app.component.ts', 'main.ts', 'angular.json'],
+          correctAnswer: 'main.ts'
+        },
+        {
+          questionText: 'Which file is the main entry point for an Angular application?',
+          options: ['index.html', 'app.component.ts', 'main.ts', 'angular.json'],
+          correctAnswer: 'main.ts'
+        },
+        {
+          questionText: 'Which file is the main entry point for an Angular application?',
+          options: ['index.html', 'app.component.ts', 'main.ts', 'angular.json'],
+          correctAnswer: 'main.ts'
+        },
+        {
+          questionText: 'Which file is the main entry point for an Angular application?',
+          options: ['index.html', 'app.component.ts', 'main.ts', 'angular.json'],
+          correctAnswer: 'main.ts'
+        },
+        {
+          questionText: 'Which file is the main entry point for an Angular application?',
+          options: ['index.html', 'app.component.ts', 'main.ts', 'angular.json'],
+          correctAnswer: 'main.ts'
+        },
+        {
+          questionText: 'Which file is the main entry point for an Angular application?',
+          options: ['index.html', 'app.component.ts', 'main.ts', 'angular.json'],
+          correctAnswer: 'main.ts'
+        },
+        {
+          questionText: 'Which file is the main entry point for an Angular application?',
+          options: ['index.html', 'app.component.ts', 'main.ts', 'angular.json'],
+          correctAnswer: 'main.ts'
+        },
+        {
+          questionText: 'Which file is the main entry point for an Angular application?',
+          options: ['index.html', 'app.component.ts', 'main.ts', 'angular.json'],
+          correctAnswer: 'main.ts'
+        },
+        {
+          questionText: 'Which file is the main entry point for an Angular application?',
+          options: ['index.html', 'app.component.ts', 'main.ts', 'angular.json'],
+          correctAnswer: 'main.ts'
+        },
+        {
+          questionText: 'Which file is the main entry point for an Angular application?',
+          options: ['index.html', 'app.component.ts', 'main.ts', 'angular.json'],
+          correctAnswer: 'main.ts'
+        },
+        {
+          questionText: 'Which file is the main entry point for an Angular application?',
+          options: ['index.html', 'app.component.ts', 'main.ts', 'angular.json'],
+          correctAnswer: 'main.ts'
+        },
+        {
+          questionText: 'Which file is the main entry point for an Angular application?',
+          options: ['index.html', 'app.component.ts', 'main.ts', 'angular.json'],
+          correctAnswer: 'main.ts'
+        },
+        {
+          questionText: 'Which file is the main entry point for an Angular application?',
+          options: ['index.html', 'app.component.ts', 'main.ts', 'angular.json'],
+          correctAnswer: 'main.ts'
+        },
+        {
+          questionText: 'Which file is the main entry point for an Angular application?',
+          options: ['index.html', 'app.component.ts', 'main.ts', 'angular.json'],
+          correctAnswer: 'main.ts'
+        },
+        {
+          questionText: 'Which file is the main entry point for an Angular application?',
+          options: ['index.html', 'app.component.ts', 'main.ts', 'angular.json'],
+          correctAnswer: 'main.ts'
+        },
+        {
+          questionText: 'Which file is the main entry point for an Angular application?',
+          options: ['index.html', 'app.component.ts', 'main.ts', 'angular.json'],
+          correctAnswer: 'main.ts'
+        },
+        {
+          questionText: 'Which file is the main entry point for an Angular application?',
+          options: ['index.html', 'app.component.ts', 'main.ts', 'angular.json'],
+          correctAnswer: 'main.ts'
+        },
+        {
+          questionText: 'Which file is the main entry point for an Angular application?',
+          options: ['index.html', 'app.component.ts', 'main.ts', 'angular.json'],
+          correctAnswer: 'main.ts'
+        },
+        {
+          questionText: 'Which file is the main entry point for an Angular application?',
+          options: ['index.html', 'app.component.ts', 'main.ts', 'angular.json'],
+          correctAnswer: 'main.ts'
+        },
+        {
+          questionText: 'Which file is the main entry point for an Angular application?',
+          options: ['index.html', 'app.component.ts', 'main.ts', 'angular.json'],
+          correctAnswer: 'main.ts'
+        },
+        {
+          questionText: 'Which file is the main entry point for an Angular application?',
+          options: ['index.html', 'app.component.ts', 'main.ts', 'angular.json'],
+          correctAnswer: 'main.ts'
+        },
+        {
+          questionText: 'Which file is the main entry point for an Angular application?',
+          options: ['index.html', 'app.component.ts', 'main.ts', 'angular.json'],
+          correctAnswer: 'main.ts'
+        },
+        {
+          questionText: 'Which file is the main entry point for an Angular application?',
+          options: ['index.html', 'app.component.ts', 'main.ts', 'angular.json'],
+          correctAnswer: 'main.ts'
+        },
+        {
+          questionText: 'Which file is the main entry point for an Angular application?',
+          options: ['index.html', 'app.component.ts', 'main.ts', 'angular.json'],
+          correctAnswer: 'main.ts'
+        },
+        {
+          questionText: 'Which file is the main entry point for an Angular application?',
+          options: ['index.html', 'app.component.ts', 'main.ts', 'angular.json'],
+          correctAnswer: 'main.ts'
+        },
+        {
+          questionText: 'Which file is the main entry point for an Angular application?',
+          options: ['index.html', 'app.component.ts', 'main.ts', 'angular.json'],
+          correctAnswer: 'main.ts'
+        },
+        {
+          questionText: 'Which file is the main entry point for an Angular application?',
+          options: ['index.html', 'app.component.ts', 'main.ts', 'angular.json'],
+          correctAnswer: 'main.ts'
+        },
+        {
+          questionText: 'Which file is the main entry point for an Angular application?',
+          options: ['index.html', 'app.component.ts', 'main.ts', 'angular.json'],
+          correctAnswer: 'main.ts'
+        },
+        {
+          questionText: 'Which file is the main entry point for an Angular application?',
+          options: ['index.html', 'app.component.ts', 'main.ts', 'angular.json'],
+          correctAnswer: 'main.ts'
+        },
+        {
+          questionText: 'Which file is the main entry point for an Angular application?',
+          options: ['index.html', 'app.component.ts', 'main.ts', 'angular.json'],
+          correctAnswer: 'main.ts'
+        },
+        {
+          questionText: 'Which file is the main entry point for an Angular application?',
+          options: ['index.html', 'app.component.ts', 'main.ts', 'angular.json'],
+          correctAnswer: 'main.ts'
+        },
+        {
+          questionText: 'Which file is the main entry point for an Angular application?',
+          options: ['index.html', 'app.component.ts', 'main.ts', 'angular.json'],
+          correctAnswer: 'main.ts'
+        },
+        {
+          questionText: 'Which file is the main entry point for an Angular application?',
+          options: ['index.html', 'app.component.ts', 'main.ts', 'angular.json'],
+          correctAnswer: 'main.ts'
+        },
+        {
+          questionText: 'Which file is the main entry point for an Angular application?',
+          options: ['index.html', 'app.component.ts', 'main.ts', 'angular.json'],
+          correctAnswer: 'main.ts'
+        },
+        {
+          questionText: 'Which file is the main entry point for an Angular application?',
+          options: ['index.html', 'app.component.ts', 'main.ts', 'angular.json'],
+          correctAnswer: 'main.ts'
+        },
+        {
+          questionText: 'Which file is the main entry point for an Angular application?',
+          options: ['index.html', 'app.component.ts', 'main.ts', 'angular.json'],
+          correctAnswer: 'main.ts'
+        },
+        {
+          questionText: 'Which file is the main entry point for an Angular application?',
+          options: ['index.html', 'app.component.ts', 'main.ts', 'angular.json'],
+          correctAnswer: 'main.ts'
+        },
+        {
+          questionText: 'Which file is the main entry point for an Angular application?',
+          options: ['index.html', 'app.component.ts', 'main.ts', 'angular.json'],
+          correctAnswer: 'main.ts'
+        },
+        {
+          questionText: 'Which file is the main entry point for an Angular application?',
+          options: ['index.html', 'app.component.ts', 'main.ts', 'angular.json'],
+          correctAnswer: 'main.ts'
+        },
+        {
+          questionText: 'Which file is the main entry point for an Angular application?',
+          options: ['index.html', 'app.component.ts', 'main.ts', 'angular.json'],
+          correctAnswer: 'main.ts'
+        },
+        {
+          questionText: 'Which file is the main entry point for an Angular application?',
+          options: ['index.html', 'app.component.ts', 'main.ts', 'angular.json'],
+          correctAnswer: 'main.ts'
+        },
+        {
+          questionText: 'Which file is the main entry point for an Angular application?',
+          options: ['index.html', 'app.component.ts', 'main.ts', 'angular.json'],
+          correctAnswer: 'main.ts'
+        },
+        {
+          questionText: 'Which file is the main entry point for an Angular application?',
+          options: ['index.html', 'app.component.ts', 'main.ts', 'angular.json'],
+          correctAnswer: 'main.ts'
         }
       ]
     },
@@ -86,6 +646,16 @@ export class QuizService {
           questionText: 'How do you define a variable with a specific type in TypeScript?',
           options: ['let name: string = "John";', 'string name = "John";', 'let name = "John" as string;', 'variable name(string) = "John";'],
           correctAnswer: 'let name: string = "John";'
+        },
+        {
+          questionText: 'What is an interface in TypeScript?',
+          options: ['A way to define a contract for an object\'s shape', 'A class that cannot be instantiated', 'A type of loop', 'A function for DOM manipulation'],
+          correctAnswer: 'A way to define a contract for an object\'s shape'
+        },
+        {
+          questionText: 'What is an interface in TypeScript?',
+          options: ['A way to define a contract for an object\'s shape', 'A class that cannot be instantiated', 'A type of loop', 'A function for DOM manipulation'],
+          correctAnswer: 'A way to define a contract for an object\'s shape'
         },
         {
           questionText: 'What is an interface in TypeScript?',
