@@ -1,0 +1,25 @@
+.question-container {
+  margin-bottom: 1.5em;
+  padding-bottom: 1em;
+  border-bottom: 1px dashed #ccc;
+}
+
+.question-text {
+  font-weight: bold;
+  margin-bottom: 1em;
+}
+
+.options-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.option-label {
+  margin-bottom: 0.5em;
+  cursor: pointer;
+}
+
+.option-letter {
+  font-weight: bold;
+  margin-right: 0.5em;
+}
