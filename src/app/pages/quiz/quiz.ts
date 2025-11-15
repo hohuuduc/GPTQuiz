@@ -34,10 +34,8 @@ export class QuizComponent implements OnInit {
   ngOnInit() {
     this.startTime = Date.now();
     const quizTitle = this.route.snapshot.paramMap.get('title');
-    console.log('Quiz title from route:', quizTitle);
     if (quizTitle) {
       this.quiz = this.quizService.getQuiz(quizTitle);
-      console.log('Quiz data:', this.quiz);
       if (this.quiz) {
         this.endTime = this.startTime + (this.quiz.questions.length * 60 * 1000);
       }
