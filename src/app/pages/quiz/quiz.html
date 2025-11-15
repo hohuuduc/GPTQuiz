@@ -4,6 +4,18 @@
 
 <div class="layout" *ngIf="quiz">
   <main>
+    <div class="exam-header">
+      <div class="info">
+        <span class="badge">Giữa kỳ</span>
+        <span class="badge">Học phần: Web 1</span>
+        <div>Mã đề: 01 · Hình thức: Trắc nghiệm &amp; Tự luận</div>
+      </div>
+      <div class="info">
+        <div>Mốc thời gian:</div>
+        <div>Bắt đầu: {{ startTime | date:'HH:mm' }} · Kết thúc dự kiến: {{ endTime | date:'HH:mm' }}</div>
+      </div>
+    </div>
+
     <form id="exam-form">
       <section class="question"
                *ngFor="let question of quiz.questions; let i = index"
@@ -62,28 +74,4 @@
       </button>
     </div>
   </aside>
-
-  <main>
-    <div class="exam-header">
-      <div class="info">
-        <span class="badge">Giữa kỳ</span>
-        <span class="badge">Học phần: Web 1</span>
-        <div>Mã đề: 01 · Hình thức: Trắc nghiệm &amp; Tự luận</div>
-      </div>
-      <div class="info">
-        <div>Mốc thời gian:</div>
-        <div>Bắt đầu: {{ startTime | date:'HH:mm' }} · Kết thúc dự kiến: {{ endTime | date:'HH:mm' }}</div>
-      </div>
-    </div>
-
-    <form id="exam-form">
-      <section class="question"
-               *ngFor="let question of quiz.questions; let i = index"
-               [id]="'q' + i"
-               [attr.data-question-index]="i"
-               data-type="mcq">
-        <app-question [question]="question" [questionIndex]="i" (optionSelected)="onOptionSelected($event)"></app-question>
-      </section>
-    </form>
-  </main>
 </div>
