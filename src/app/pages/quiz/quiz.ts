@@ -10,8 +10,8 @@ import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-quiz',
-  templateUrl: './quiz.html',
-  styleUrls: ['./quiz.css'],
+  templateUrl: 'quiz.html',
+  styleUrls: ['quiz.css'],
   standalone: true,
   imports: [TimerComponent, QuestionComponent, MatButtonModule, CommonModule]
 })
@@ -64,20 +64,6 @@ export class QuizComponent implements OnInit {
     if (element) {
       element.scrollIntoView({ behavior: 'smooth', block: 'start' });
       this.currentQuestionIndex = parseInt(questionId.replace('q', ''));
-    }
-  }
-
-  prevQuestion() {
-    if (this.currentQuestionIndex > 0) {
-      this.currentQuestionIndex--;
-      this.scrollToQuestion('q' + this.currentQuestionIndex);
-    }
-  }
-
-  nextQuestion() {
-    if (this.quiz && this.currentQuestionIndex < this.quiz.questions.length - 1) {
-      this.currentQuestionIndex++;
-      this.scrollToQuestion('q' + this.currentQuestionIndex);
     }
   }
 

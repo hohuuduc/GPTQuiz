@@ -4,7 +4,7 @@
     <p>Thí sinh: Nguyễn Văn A · Mã SV: 20201234</p>
   </div>
   <div class="floating-timer" id="timer">
-    <app-timer [duration]="quiz?.questions?.length ? quiz.questions.length * 60 : 0" (timeUp)="handleTimeUp()"></app-timer>
+    <app-timer [duration]="(quiz?.questions?.length ?? 0) * 60" (timeUp)="handleTimeUp()"></app-timer>
   </div>
 </header>
 
@@ -72,14 +72,6 @@
                data-type="mcq">
         <app-question [question]="question" [questionIndex]="i" (optionSelected)="onOptionSelected($event)"></app-question>
       </section>
-
-      <div class="submit-bar">
-        <button type="button" class="btn-outline" id="btn-prev" (click)="prevQuestion()">← Câu trước</button>
-        <button type="button" class="btn-outline" id="btn-next" (click)="nextQuestion()">Câu tiếp →</button>
-        <button type="button" class="btn-primary" id="btn-submit-main" (click)="submitQuiz()">
-          Nộp bài
-        </button>
-      </div>
     </form>
   </main>
 </div>
