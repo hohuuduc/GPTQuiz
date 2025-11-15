@@ -37,7 +37,7 @@ header .timer {
 
 .layout {
   display: grid;
-  grid-template-columns: 260px minmax(0, 1fr);
+  grid-template-columns: minmax(0, 1fr) 260px;
   gap: 16px;
   padding: 16px 24px 24px;
 }
@@ -159,6 +159,7 @@ main {
   padding: 20px 24px 24px;
   box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
   max-width: 900px;
+  margin: 0 auto;
 }
 
 .exam-header {
@@ -321,7 +322,7 @@ main {
 .floating-timer {
   position: fixed;
   top: 20px;
-  right: 20px;
+  left: 20px;
   z-index: 9999;
   background: #1f2937;
   color: #fff;

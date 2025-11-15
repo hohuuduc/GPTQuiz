@@ -9,6 +9,38 @@
 </header>
 
 <div class="layout" *ngIf="quiz">
+  <main>
+    <div class="exam-header">
+      <div class="info">
+        <span class="badge">Giữa kỳ</span>
+        <span class="badge">Học phần: Web 1</span>
+        <div>Mã đề: 01 · Hình thức: Trắc nghiệm &amp; Tự luận</div>
+      </div>
+      <div class="info">
+        <div>Mốc thời gian:</div>
+        <div>Bắt đầu: {{ startTime | date:'HH:mm' }} · Kết thúc dự kiến: {{ endTime | date:'HH:mm' }}</div>
+      </div>
+    </div>
+
+    <form id="exam-form">
+      <section class="question"
+               *ngFor="let question of quiz.questions; let i = index"
+               [id]="'q' + i"
+               [attr.data-question-index]="i"
+               data-type="mcq">
+        <app-question [question]="question" [questionIndex]="i" (optionSelected)="onOptionSelected($event)"></app-question>
+      </section>
+
+      <div class="submit-bar">
+        <button type="button" class="btn-outline" id="btn-prev" (click)="prevQuestion()">← Câu trước</button>
+        <button type="button" class="btn-outline" id="btn-next" (click)="nextQuestion()">Câu tiếp →</button>
+        <button type="button" class="btn-primary" id="btn-submit-main" (click)="submitQuiz()">
+          Nộp bài
+        </button>
+      </div>
+    </form>
+  </main>
+
   <aside class="sidebar">
     <section>
       <div class="sidebar-section-title">Thông tin bài thi</div>
@@ -50,36 +82,4 @@
       </button>
     </div>
   </aside>
-
-  <main>
-    <div class="exam-header">
-      <div class="info">
-        <span class="badge">Giữa kỳ</span>
-        <span class="badge">Học phần: Web 1</span>
-        <div>Mã đề: 01 · Hình thức: Trắc nghiệm &amp; Tự luận</div>
-      </div>
-      <div class="info">
-        <div>Mốc thời gian:</div>
-        <div>Bắt đầu: {{ startTime | date:'HH:mm' }} · Kết thúc dự kiến: {{ endTime | date:'HH:mm' }}</div>
-      </div>
-    </div>
-
-    <form id="exam-form">
-      <section class="question"
-               *ngFor="let question of quiz.questions; let i = index"
-               [id]="'q' + i"
-               [attr.data-question-index]="i"
-               data-type="mcq">
-        <app-question [question]="question" [questionIndex]="i" (optionSelected)="onOptionSelected($event)"></app-question>
-      </section>
-
-      <div class="submit-bar">
-        <button type="button" class="btn-outline" id="btn-prev" (click)="prevQuestion()">← Câu trước</button>
-        <button type="button" class="btn-outline" id="btn-next" (click)="nextQuestion()">Câu tiếp →</button>
-        <button type="button" class="btn-primary" id="btn-submit-main" (click)="submitQuiz()">
-          Nộp bài
-        </button>
-      </div>
-    </form>
-  </main>
 </div>
