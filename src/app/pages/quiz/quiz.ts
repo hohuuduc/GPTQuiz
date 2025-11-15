@@ -10,8 +10,8 @@ import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-quiz',
-  templateUrl: './quiz.html',
-  styleUrls: ['./quiz.css'],
+  templateUrl: 'quiz.html',
+  styleUrls: ['quiz.css'],
   standalone: true,
   imports: [TimerComponent, QuestionComponent, MatButtonModule, CommonModule]
 })
@@ -19,6 +19,10 @@ export class QuizComponent implements OnInit {
   quiz: Quiz | undefined;
   userAnswers: { [key: number]: string } = {};
   startTime: number = 0;
+  endTime: number = 0;
+  progress: number = 0;
+  answeredQuestions: number = 0;
+  currentQuestionIndex: number = 0;
 
   constructor(
     private route: ActivatedRoute,
@@ -32,11 +36,33 @@ export class QuizComponent implements OnInit {
     const quizTitle = this.route.snapshot.paramMap.get('title');
     if (quizTitle) {
       this.quiz = this.quizService.getQuiz(quizTitle);
+      if (this.quiz) {
+        this.endTime = this.startTime + (this.quiz.questions.length * 60 * 1000);
+      }
     }
   }
 
   onOptionSelected(payload: { questionIndex: number, option: string }) {
     this.userAnswers[payload.questionIndex] = payload.option;
+    this.updateProgress();
+  }
+
+  updateProgress() {
+    const answeredCount = Object.keys(this.userAnswers).length;
+    this.answeredQuestions = answeredCount;
+    this.progress = (answeredCount / (this.quiz?.questions.length || 1)) * 100;
+  }
+
+  isAnswered(questionIndex: number): boolean {
+    return this.userAnswers.hasOwnProperty(questionIndex);
+  }
+
+  scrollToQuestion(questionId: string) {
+    const element = document.getElementById(questionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      this.currentQuestionIndex = parseInt(questionId.replace('q', ''));
+    }
   }
 
   submitQuiz() {
