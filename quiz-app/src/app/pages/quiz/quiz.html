@@ -1,0 +1,14 @@
+<div *ngIf="quiz">
+  <h1>{{ quiz.title }}</h1>
+  <app-timer [duration]="quiz.questions.length * 60" (timeUp)="handleTimeUp()"></app-timer>
+
+  <div *ngIf="currentQuestion">
+    <app-question [question]="currentQuestion" (optionSelected)="onOptionSelected($event)"></app-question>
+  </div>
+
+  <div class="navigation-buttons">
+    <button mat-button (click)="previousQuestion()" [disabled]="currentQuestionIndex === 0">Previous</button>
+    <button mat-button (click)="nextQuestion()" [disabled]="currentQuestionIndex === (quiz.questions.length - 1)">Next</button>
+    <button mat-raised-button color="primary" (click)="submitQuiz()">Submit</button>
+  </div>
+</div>

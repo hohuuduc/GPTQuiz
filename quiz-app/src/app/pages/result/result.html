@@ -1,0 +1,8 @@
+<div *ngIf="result">
+  <h1>Quiz Result</h1>
+  <p>You scored {{ result.score }} out of {{ result.totalQuestions }}</p>
+  <p>Time taken: {{ formatTime(result.timeTaken) }}</p>
+</div>
+<div *ngIf="!result">
+  <p>No result to display.</p>
+</div>
