@@ -17,7 +17,6 @@ import { CommonModule } from '@angular/common';
 })
 export class QuizComponent implements OnInit {
   quiz: Quiz | undefined;
-  currentQuestionIndex: number = 0;
   userAnswers: { [key: number]: string } = {};
   startTime: number = 0;
 
@@ -36,24 +35,8 @@ export class QuizComponent implements OnInit {
     }
   }
 
-  get currentQuestion(): Question | undefined {
-    return this.quiz?.questions[this.currentQuestionIndex];
-  }
-
-  onOptionSelected(option: string) {
-    this.userAnswers[this.currentQuestionIndex] = option;
-  }
-
-  nextQuestion() {
-    if (this.currentQuestionIndex < (this.quiz?.questions.length || 0) - 1) {
-      this.currentQuestionIndex++;
-    }
-  }
-
-  previousQuestion() {
-    if (this.currentQuestionIndex > 0) {
-      this.currentQuestionIndex--;
-    }
+  onOptionSelected(payload: { questionIndex: number, option: string }) {
+    this.userAnswers[payload.questionIndex] = payload.option;
   }
 
   submitQuiz() {

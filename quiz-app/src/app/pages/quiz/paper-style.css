@@ -1,0 +1,32 @@
+body {
+  font-family: 'Times New Roman', Times, serif;
+  background-color: #f0f0f0;
+}
+
+.quiz-sheet {
+  background-color: white;
+  padding: 2em;
+  margin: 2em auto;
+  max-width: 800px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  border: 1px solid #ccc;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  padding-bottom: 0.5em;
+}
+
+.timer {
+  text-align: right;
+  font-size: 1.2em;
+  margin-bottom: 1em;
+}
+
+.submit-button-container {
+  text-align: center;
+  margin-top: 2em;
+}
