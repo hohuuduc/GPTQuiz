@@ -1,5 +1,8 @@
 <div class="question-container">
-  <p class="question-text">{{ questionIndex + 1 }}. {{ question.questionText }}</p>
+  <div class="question-header">
+    <p class="question-text">{{ questionIndex + 1 }}. {{ question.questionText }}</p>
+    <div class="question-score">{{ question.score }} điểm</div>
+  </div>
   <div class="options-container">
     @for (option of question.options; track $index) {
     <label class="option-label">
