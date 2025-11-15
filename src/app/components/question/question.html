@@ -1,5 +1,8 @@
 <div class="question-container">
-  <p class="question-text">{{ questionIndex + 1 }}. {{ question.questionText }}</p>
+  <div class="question-header">
+    <p class="question-text">{{ questionIndex + 1 }}. {{ question.questionText }}</p>
+    <div class="question-score">{{ question.score }} điểm</div>
+  </div>
   <div class="options-container">
     <label *ngFor="let option of question.options; let i = index" class="option-label">
       <input type="radio" [name]="'question-' + questionIndex" [value]="option" (change)="onSelect(option)">

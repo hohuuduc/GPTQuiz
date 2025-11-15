@@ -23,6 +23,7 @@ export class QuizComponent implements OnInit {
   progress: number = 0;
   answeredQuestions: number = 0;
   currentQuestionIndex: number = 0;
+  totalScore: number = 0;
 
   constructor(
     private route: ActivatedRoute,
@@ -38,6 +39,7 @@ export class QuizComponent implements OnInit {
       this.quiz = this.quizService.getQuiz(quizTitle);
       if (this.quiz) {
         this.endTime = this.startTime + (this.quiz.questions.length * 60 * 1000);
+        this.totalScore = this.quiz.questions.reduce((acc, q) => acc + q.score, 0);
       }
     }
   }
@@ -70,7 +72,7 @@ export class QuizComponent implements OnInit {
     let score = 0;
     this.quiz?.questions.forEach((question, index) => {
       if (this.userAnswers[index] === question.correctAnswer) {
-        score++;
+        score += question.score;
       }
     });
 
