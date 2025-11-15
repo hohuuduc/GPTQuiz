@@ -2,13 +2,14 @@
   display: block;
   max-width: 1200px;
   margin: auto;
+  padding: 0 24px;
 }
 
 .layout {
   display: grid;
   grid-template-columns: 260px minmax(0, 1fr) 260px;
   gap: 16px;
-  padding: 16px 24px 24px;
+  padding: 16px 24px 24px 0;
 }
 
 /* Sidebar */
@@ -18,12 +19,12 @@
   background: #ffffff;
   border-radius: 12px;
   padding: 16px;
-  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+  box-shadow: 0 5px 10px rgba(15, 1, 39, 0.2);
   display: flex;
   flex-direction: column;
   gap: 16px;
   position: sticky;
-  top: 12px;
+  top: 20px;
   margin: 0 auto auto;
 }
 
@@ -313,9 +314,13 @@ main {
   border-top: 1px solid #e5e7eb;
 }
 
-@media (max-width: 950px) {
+@media (max-width: 1060px) {
   .layout {
     grid-template-columns: 1fr;
+  }
+
+  .left-side {
+    order: 3;
   }
 
   main {
@@ -325,27 +330,29 @@ main {
   .sidebar {
     width: 100%;
     max-width: 550px;
+    max-height: 33vh;
     position: sticky;
     order: 1;
   }
+
+  .floating-timer {
+    margin: 0 !important;
+    right: 20px;
+  }
 }
 
-@media (min-width: 951px) and (max-width: 1200px) {
+@media (min-width: 1061px) and (max-width: 1300px) {
   .layout {
-    grid-template-columns: 0 minmax(0, 1fr) 260px;
+    grid-template-columns: 1fr 600px 260px;
   }
 
-  .sidebar {
-    position: relative;
-    max-height: none;
-  }
 }
 
 .floating-timer {
   width: fit-content;
   height: fit-content;
   position: fixed;
-  top: 20px;
+  top: 24px;
   z-index: 9999;
   background: #1f2937;
   color: #fff;
@@ -355,6 +362,7 @@ main {
   border-radius: 12px;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
   margin-left: 10px;
+  margin-right: 20px;
   user-select: none;
 }
 
@@ -368,4 +376,13 @@ main {
   display: flex;
   flex-direction: column;
   overflow: auto;
+}
+
+#theme-toggle {
+  cursor: pointer;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  background: var(--text);
+  color: var(--bg);
 }

@@ -2,6 +2,7 @@ export interface Question {
   questionText: string;
   options: string[];
   correctAnswer: string;
+  score: number;
 }
 
 export interface Quiz {

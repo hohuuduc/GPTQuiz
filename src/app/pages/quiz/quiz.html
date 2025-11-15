@@ -1,8 +1,8 @@
 <div class="layout" *ngIf="quiz">
   <aside class="left-side">
-  <div class="floating-timer" id="timer">
-    <app-timer [duration]="(quiz?.questions?.length ?? 0) * 60" (timeUp)="handleTimeUp()"></app-timer>
-  </div>
+    <div class="floating-timer" id="timer">
+      <app-timer [duration]="(quiz?.questions?.length ?? 0) * 60" (timeUp)="handleTimeUp()"></app-timer>
+    </div>
 
   </aside>
   <main>
