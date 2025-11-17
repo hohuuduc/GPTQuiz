@@ -23,7 +23,7 @@ jobs:
         run: npm ci --no-progress
 
       - name: Build Angular app
-        run: ng build --configuration production --base-href /quiz-app/
+        run: ./node_modules/.bin/ng build --configuration production --base-href /quiz-app/
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
