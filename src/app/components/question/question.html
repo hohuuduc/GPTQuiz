@@ -10,6 +10,10 @@
       <span class="option-letter">{{ getOptionLetter($index) }}.</span> {{ option }}
     </label>
     }
-
+  <div class="question-actions">
+    <button type="button" class="btn-mark-review" (click)="toggleMarkForReview()">
+      {{ isMarkedForReview ? 'Bỏ đánh dấu' : 'Đánh dấu để xem lại' }}
+    </button>
+  </div>
   </div>
 </div>
