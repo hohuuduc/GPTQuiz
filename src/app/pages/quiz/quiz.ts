@@ -24,6 +24,7 @@ export class QuizComponent implements OnInit {
   answeredQuestions: number = 0;
   currentQuestionIndex: number = 0;
   totalScore: number = 0;
+  markedForReview: boolean[] = [];
 
   constructor(
     private route: ActivatedRoute,
@@ -40,6 +41,7 @@ export class QuizComponent implements OnInit {
       if (this.quiz) {
         this.endTime = this.startTime + (this.quiz.questions.length * 60 * 1000);
         this.totalScore = this.quiz.questions.reduce((acc, q) => acc + q.score, 0);
+        this.markedForReview = new Array(this.quiz.questions.length).fill(false);
       }
     }
   }
@@ -47,6 +49,10 @@ export class QuizComponent implements OnInit {
   onOptionSelected(payload: { questionIndex: number, option: string }) {
     this.userAnswers[payload.questionIndex] = payload.option;
     this.updateProgress();
+  }
+
+  onMarkForReview(payload: { questionIndex: number, isMarked: boolean }) {
+    this.markedForReview[payload.questionIndex] = payload.isMarked;
   }
 
   updateProgress() {
