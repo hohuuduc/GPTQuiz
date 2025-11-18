@@ -13,6 +13,9 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      - name: Extract repo name
+        run: echo "REPO_NAME=${GITHUB_REPOSITORY#*/}" >> $GITHUB_ENV
+
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
@@ -23,10 +26,11 @@ jobs:
         run: npm ci --no-progress
 
       - name: Build Angular app
-        run: ./node_modules/.bin/ng build --configuration production --base-href /quiz-app/
+        run: ./node_modules/.bin/ng build --configuration production --base-href "/${REPO_NAME}/"
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist/quiz-app
+          publish_dir: ./dist/${{ env.REPO_NAME }}
+          enable_jekyll: false
