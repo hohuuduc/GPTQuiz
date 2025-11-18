@@ -26,9 +26,6 @@ jobs:
       - name: Build Angular app
         run: ./node_modules/.bin/ng build --configuration production --base-href "/${REPO_NAME}/"
 
-      - name: Create SPA fallback
-        run: cp dist/quiz-app/browser/index.html dist/quiz-app/browser/404.html
-
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
