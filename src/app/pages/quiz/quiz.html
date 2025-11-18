@@ -9,8 +9,8 @@
     <form id="exam-form">
       <section class="question" *ngFor="let question of quiz.questions; let i = index" [id]="'q' + i"
         [attr.data-question-index]="i" data-type="mcq">
-        <app-question [question]="question" [questionIndex]="i"
-          (optionSelected)="onOptionSelected($event)"></app-question>
+        <app-question [question]="question" [questionIndex]="i" [isMarkedForReview]="markedForReview[i]"
+          (optionSelected)="onOptionSelected($event)" (markForReview)="onMarkForReview($event)"></app-question>
       </section>
     </form>
   </main>
@@ -37,7 +37,7 @@
       <div class="question-nav" id="question-nav">
         <button *ngFor="let question of quiz.questions; let i = index" type="button" [attr.data-target]="'q' + i"
           [class.active]="i === currentQuestionIndex" [class.answered]="isAnswered(i)"
-          (click)="scrollToQuestion('q' + i)">
+          [class.marked]="markedForReview[i]" (click)="scrollToQuestion('q' + i)">
           {{ i + 1 }}
         </button>
       </div>
