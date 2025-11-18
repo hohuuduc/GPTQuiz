@@ -4,36 +4,42 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: write
+  pages: write      # cho deploy pages
+  id-token: write   # bắt buộc để xác thực
 
 jobs:
-  build-and-deploy:
+  build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - run: npm ci
 
       - name: Extract repo name
         run: echo "REPO_NAME=${GITHUB_REPOSITORY#*/}" >> $GITHUB_ENV
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: "20"
-          cache: "npm"
-
-      - name: Install dependencies
-        run: npm ci --no-progress
-
       - name: Build Angular app
         run: ./node_modules/.bin/ng build --configuration production --base-href "/${REPO_NAME}/"
 
-      - name: Debug dist folder
-        run: ls -R dist
+      - name: Create SPA fallback
+        run: cp dist/quiz-app/browser/index.html dist/quiz-app/browser/404.html
 
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v4
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist/quiz-app/browser
-          enable_jekyll: false
+          path: dist/quiz-app/browser   # Thư mục Angular build thật sự
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - id: deploy
+        uses: actions/deploy-pages@v4
