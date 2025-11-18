@@ -1,6 +1,6 @@
 :host {
   display: block;
-  max-width: 1200px;
+  max-width: 1300px;
   margin: auto;
   padding: 0 24px;
 }
@@ -148,7 +148,7 @@ main {
   padding: 20px 24px 24px;
   box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
   width: 100%;
-  max-width: 550px;
+  max-width: 650px;
   margin: 0 auto;
 }
 
@@ -314,9 +314,30 @@ main {
   border-top: 1px solid #e5e7eb;
 }
 
-@media (max-width: 1060px) {
+@media (min-width: 1051px) and (max-width: 1350px) {
+  .layout {
+    grid-template-columns: minmax(0, 1fr) 260px;
+    position: relative;
+  }
+
+  .left-side {
+    position: absolute;
+    right: -29px;
+  }
+
+  .floating-timer {
+    scale: 0.8;
+  }
+
+  :host {
+    max-width: 1040px;
+  }
+}
+
+@media (max-width: 1050px) {
   .layout {
     grid-template-columns: 1fr;
+    padding-right: 0;
   }
 
   .left-side {
@@ -329,22 +350,35 @@ main {
 
   .sidebar {
     width: 100%;
-    max-width: 550px;
-    max-height: 33vh;
+    max-width: 650px;
+    max-height: 340px;
     position: sticky;
     order: 1;
+    padding: 16px 24px;
   }
 
   .floating-timer {
     margin: 0 !important;
     right: 20px;
   }
+
+  :host {
+    padding: 0;
+  }
 }
 
-@media (min-width: 1061px) and (max-width: 1300px) {
-  .layout {
-    grid-template-columns: 1fr 600px 260px;
+@media (max-width: 700px) {
+  .floating-timer {
+    right: 4px;
+    scale: 0.8;
   }
+
+  .question {
+    padding: 0;
+  }
+}
+
+@media (max-width: 620px) {
 
 }
 
@@ -391,9 +425,11 @@ main {
   background: #fff7ed;
   border-color: #f97316;
 }
+
 .question-actions {
   margin-top: 10px;
 }
+
 .btn-mark-review {
   background-color: #f0f0f0;
   border: 1px solid #ccc;
@@ -401,6 +437,7 @@ main {
   padding: 8px 12px;
   cursor: pointer;
 }
+
 .btn-mark-review:hover {
   background-color: #e0e0e0;
 }

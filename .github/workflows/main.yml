@@ -4,8 +4,8 @@ on:
   workflow_dispatch:
 
 permissions:
-  pages: write      # cho deploy pages
-  id-token: write   # bắt buộc để xác thực
+  pages: write
+  id-token: write
 
 jobs:
   build:
@@ -19,17 +19,19 @@ jobs:
           cache: npm
 
       - run: npm ci
+        working-directory: web
 
       - name: Extract repo name
         run: echo "REPO_NAME=${GITHUB_REPOSITORY#*/}" >> $GITHUB_ENV
 
       - name: Build Angular app
         run: ./node_modules/.bin/ng build --configuration production --base-href "/${REPO_NAME}/"
+        working-directory: web
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: dist/quiz-app/browser   # Thư mục Angular build thật sự
+          path: web/dist/quiz-app/browser
 
   deploy:
     needs: build
