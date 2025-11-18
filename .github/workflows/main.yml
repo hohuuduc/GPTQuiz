@@ -35,5 +35,5 @@ jobs:
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist/quiz-app
+          publish_dir: ./dist/quiz-app/browser
           enable_jekyll: false
