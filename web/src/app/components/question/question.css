@@ -1,0 +1,45 @@
+.question-container {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.question-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 15px;
+}
+
+.question-text {
+  font-size: 1.1em;
+  font-weight: 500;
+  margin: 0;
+  flex: 1;
+}
+
+.question-score {
+  font-size: 0.9em;
+  font-weight: bold;
+  color: #333;
+  background-color: #f0f0f0;
+  padding: 5px 10px;
+  border-radius: 4px;
+}
+
+.options-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.option-label {
+  margin-bottom: 0.5em;
+  cursor: pointer;
+}
+
+.option-letter {
+  font-weight: bold;
+  margin-right: 0.5em;
+}
