@@ -42,3 +42,45 @@
   font-weight: bold;
   margin-right: 0.5em;
 }
+.question-footer {
+  margin-top: 20px;
+  padding-top: 15px;
+  border-top: 1px solid #eee;
+  display: flex;
+  justify-content: flex-end; /* Đẩy nút sang phải */
+}
+
+.btn-mark-review {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: transparent;
+  border: 1px solid #d1d5db;
+  color: #6b7280;
+  border-radius: 20px; /* Bo tròn kiểu viên thuốc */
+  padding: 6px 16px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.btn-mark-review .icon {
+  font-size: 18px;
+}
+
+.btn-mark-review:hover {
+  background-color: #f3f4f6;
+  border-color: #9ca3af;
+}
+
+/* Trạng thái khi đã đánh dấu (Active) */
+.btn-mark-review.marked {
+  background-color: #fff7ed; /* Màu cam nhạt */
+  border-color: #f97316;
+  color: #c2410c;
+}
+
+.btn-mark-review.marked .icon {
+  color: #ea580c;
+}
