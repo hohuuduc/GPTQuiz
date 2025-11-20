@@ -2,7 +2,7 @@ import oauth2orize, { DeserializeClientDoneFunction, ExchangeDoneFunction, Issue
 import Client, { ClientDoc } from '../models/client.model';
 import User, { UserDoc } from '../models/user.model';
 import AuthCode from '../models/authCode.model';
-import * as uuid from 'uuid';
+const { v4: uuidv4 } = require('uuid');
 import jwt from 'jsonwebtoken';
 
 const server = oauth2orize.createServer<ClientDoc, UserDoc>();
@@ -24,7 +24,7 @@ server.deserializeClient(async (id, done: DeserializeClientDoneFunction<ClientDo
 });
 
 server.grant(oauth2orize.grant.code(async (client, redirectURI, user, done: IssueGrantCodeDoneFunction) => {
-  const code = uuid.v4();
+  const code = uuidv4();
   const authCode = new AuthCode({
     code,
     clientId: client.clientId,
