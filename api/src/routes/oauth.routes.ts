@@ -56,15 +56,21 @@ router.post('/oauth/token',
 
 // Seed a default client for GPT Actions
 const seedDefaultClient = async () => {
-  const existingClient = await Client.findOne({ clientId: process.env.GPT_CLIENT_ID });
-  if (!existingClient) {
-    const newClient = new Client({
-      clientId: process.env.GPT_CLIENT_ID,
-      clientSecret: process.env.GPT_CLIENT_SECRET!,
-      redirectUris: [`https://chat.openai.com/aip/${process.env.GPT_ID}/oauth/callback`],
-    });
-    await newClient.save();
-    console.log('Default GPT Action client seeded.');
+  try {
+    const result = await Client.findOneAndUpdate(
+      { clientId: process.env.GPT_CLIENT_ID },
+      {
+        clientId: process.env.GPT_CLIENT_ID,
+        clientSecret: process.env.GPT_CLIENT_SECRET,
+        redirectUris: [`https://chat.openai.com/aip/${process.env.GPT_ID}/oauth/callback`],
+      },
+      { upsert: true, new: true, setDefaultsOnInsert: true }
+    );
+    console.log('Default GPT Action client ready.');
+  } catch (error: any) {
+    if (error.code !== 11000) {
+      console.error('Error seeding default client:', error);
+    }
   }
 };
 

@@ -1,7 +1,9 @@
+import dotenv from 'dotenv';
+dotenv.config();
+
 import express, { Express, Request, Response } from 'express';
 import session from 'express-session';
 import mongoose from 'mongoose';
-import dotenv from 'dotenv';
 import quizRoutes from './routes/quiz.routes';
 import resultRoutes from './routes/result.routes';
 import authRoutes from './routes/auth.routes';
@@ -10,8 +12,6 @@ import gptRoutes from './routes/gpt.routes';
 import passport from './config/passport';
 import MongoStore from 'connect-mongo';
 import { openApiSchema } from './openapi.schema';
-
-dotenv.config();
 
 const app: Express = express();
 
