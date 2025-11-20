@@ -1,5 +1,5 @@
 import { Schema, model, Document } from 'mongoose';
-import * as uuid from 'uuid';
+const { v4: uuidv4 } = require('uuid');
 
 export interface IQuiz extends Document {
   content: string;
@@ -16,7 +16,7 @@ const quizSchema = new Schema<IQuiz>({
   correctAnswer: { type: Number, required: true },
   score: { type: Number, required: true },
   duration: { type: Number, required: true },
-  uuid: { type: String, default: uuid.v4, unique: true },
+  uuid: { type: String, default: uuidv4, unique: true },
 });
 
 export default model<IQuiz>('Quiz', quizSchema);
