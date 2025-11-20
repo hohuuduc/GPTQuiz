@@ -5,7 +5,7 @@ export const createQuiz = async (req: Request, res: Response) => {
   try {
     const quiz: IQuiz = new Quiz(req.body);
     await quiz.save();
-    const url = `hohuuduc.info/quiz?${quiz.uuid}`;
+    const url = `${process.env.HOST}/quiz?${quiz.uuid}`;
     res.status(201).json({ url });
   } catch (error) {
     res.status(400).json({ error: (error as Error).message });
