@@ -7,7 +7,7 @@ export const openApiSchema = {
   },
   "servers": [
     {
-      "url": `${process.env.HOST || 'http://localhost:3000'}`
+      "url": `${process.env.API_HOST || 'http://localhost:3000'}`
     }
   ],
   "paths": {
@@ -42,7 +42,7 @@ export const openApiSchema = {
                     "url": {
                       "type": "string",
                       "description": "Shareable URL for the quiz",
-                      "example": `${process.env.HOST || 'http://localhost:3000'}/quiz?abc-123-def`
+                      "example": `${process.env.WEB_HOST || 'http://localhost:3000'}/quiz?abc-123-def`
                     }
                   }
                 }
@@ -559,12 +559,6 @@ export const openApiSchema = {
       }
     },
     "securitySchemes": {
-      "bearerAuth": {
-        "type": "http",
-        "scheme": "bearer",
-        "bearerFormat": "JWT",
-        "description": "JWT token obtained from /auth/google/callback"
-      },
       "BearerToken": {
         "type": "http",
         "scheme": "bearer",
