@@ -2,7 +2,7 @@ import oauth2orize, { DeserializeClientDoneFunction, ExchangeDoneFunction, Issue
 import Client, { ClientDoc } from '../models/client.model';
 import User, { UserDoc } from '../models/user.model';
 import AuthCode from '../models/authCode.model';
-import { v4 as uuidv4 } from 'uuid';
+const { v4: uuidv4 } = require('uuid');
 import jwt from 'jsonwebtoken';
 
 const server = oauth2orize.createServer<ClientDoc, UserDoc>();
