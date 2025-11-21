@@ -19,12 +19,24 @@ router.get('/oauth/authorize',
   ensureLoggedIn,
   oauth2Server.authorization(async (clientID, redirectURI, done: ValidateDoneFunction) => {
     try {
+      console.log('OAuth authorize - clientID:', clientID, 'redirectURI:', redirectURI);
       const client = await Client.findOne({ clientId: clientID });
-      if (!client || !client.redirectUris.includes(redirectURI)) {
-        return done(new Error('Invalid client or redirect URI'));
+
+      if (!client) {
+        console.error('Client not found:', clientID);
+        return done(new Error('Invalid client ID'));
       }
+
+      console.log('Client found, registered redirectUris:', client.redirectUris);
+      if (!client.redirectUris.includes(redirectURI)) {
+        console.error('Redirect URI mismatch. Requested:', redirectURI, 'Registered:', client.redirectUris);
+        return done(new Error('Invalid redirect URI'));
+      }
+
+      console.log('Client validated successfully');
       return done(null, client, redirectURI);
     } catch (error: any) {
+      console.error('OAuth authorization error:', error);
       return done(error);
     }
   }),
