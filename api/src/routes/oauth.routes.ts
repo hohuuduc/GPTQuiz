@@ -10,6 +10,8 @@ const ensureLoggedIn = (req: Request, res: Response, next: NextFunction) => {
   if (req.isAuthenticated()) {
     return next();
   }
+  // Save the URL they were trying to access (including query params)
+  (req.session as any).returnTo = req.originalUrl;
   res.redirect('/auth/google'); // Redirect to Google login if not authenticated
 };
 
